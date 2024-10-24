@@ -72,6 +72,10 @@ userRouter.post("/signin",async function(req, res) {
 //     })
 // })
 
+userRouter.get("/profile", userMiddleware, async function(req, res) {
+    message: "Profile fetched successfully"
+})
+
 module.exports = {
     userRouter: userRouter
 }
